@@ -20,7 +20,7 @@
   [super viewDidLoad];
   // Do any additional setup after loading the view.
   
-  NSDictionary *props = @{@"paymentUrl": @"https://checkout.nimbbl.tech/?order_id=undefined"};
+  NSDictionary *props = @{ @"orderID": self.orderID, @"accessKey" : self.accessKey};
   
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:nil];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge moduleName:@"PaymentGateway" initialProperties:props];

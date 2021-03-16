@@ -11,6 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PaymentScreen : UIViewController
 
+@property (nonatomic, strong) NSString* orderID;
+@property (nonatomic, strong) NSString* accessKey;
+
 @end
 
 NS_ASSUME_NONNULL_END

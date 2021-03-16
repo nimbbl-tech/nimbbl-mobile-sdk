@@ -30,7 +30,7 @@ static void InitializeFlipper(UIApplication *application) {
 #ifdef FB_SONARKIT_ENABLED
   InitializeFlipper(application);
 #endif
-  NSDictionary *props = @{@"paymentUrl": @"https://checkout.nimbbl.tech/?order_id=undefined"};
+  NSDictionary *props = @{ @"orderID": @"1MwvMl1B9AAad7ry", @"accessKey" : @"access_key_1MwvMkKkweorz0ry"};
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
                                                    moduleName:@"PaymentGateway"
