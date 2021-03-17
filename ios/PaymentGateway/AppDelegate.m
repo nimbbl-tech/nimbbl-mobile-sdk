@@ -4,6 +4,7 @@
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 #import <React/RCTLog.h>
+#import <PaymentSDK/PaymentScreen.h>
 
 #ifdef FB_SONARKIT_ENABLED
 #import <FlipperKit/FlipperClient.h>
@@ -12,6 +13,7 @@
 #import <FlipperKitNetworkPlugin/FlipperKitNetworkPlugin.h>
 #import <SKIOSNetworkPlugin/SKIOSNetworkAdapter.h>
 #import <FlipperKitReactPlugin/FlipperKitReactPlugin.h>
+
 
 static void InitializeFlipper(UIApplication *application) {
   FlipperClient *client = [FlipperClient sharedClient];
@@ -26,26 +28,25 @@ static void InitializeFlipper(UIApplication *application) {
 
 @implementation AppDelegate
 
-RCT_EXPORT_MODULE();
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 #ifdef FB_SONARKIT_ENABLED
   InitializeFlipper(application);
 #endif
-  NSDictionary *props = @{ @"orderID": @"BmO74dQ8xzmbW7qx", @"accessKey" : @"access_key_1MwvMkKkweorz0ry"};
-  RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
-  RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
-                                                   moduleName:@"PaymentGateway"
-                                            initialProperties:props];
-
-  rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
+//  NSDictionary *props = @{ @"orderID": @"BmO74dQ8xzmbW7qx", @"accessKey" : @"access_key_1MwvMkKkweorz0ry"};
+//  RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
+//  RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
+//                                                   moduleName:@"PaymentGateway"
+//                                            initialProperties:props];
+//
+//  rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
   
 
-
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-  UIViewController *rootViewController = [UIViewController new];
-  rootViewController.view = rootView;
+  PaymentScreen *rootViewController = [[PaymentScreen alloc] init];
+  rootViewController.orderID = @"BmO74dQ8xzmbW7qx";
+  rootViewController.accessKey = @"";
+  //rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
   return YES;
@@ -60,10 +61,6 @@ RCT_EXPORT_MODULE();
 #endif
 }
 
-RCT_EXPORT_METHOD(getUrl:(NSString *) url )
-{
-  RCTLogInfo(@"Url data: %@", url);
-  NSLog(@"Appdelegate url: %@", url);
-}
+
 
 @end

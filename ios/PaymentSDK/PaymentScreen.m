@@ -24,6 +24,7 @@
   // Do any additional setup after loading the view.
   
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"getUrl" object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"showError" object:nil];
   
   [self setUpReactNative];
   
@@ -42,10 +43,26 @@
 }
 
 -(void) receiveNotification:(NSNotification*)notification{
-  if ([notification.name isEqualToString:@"getUrl"])
-  {
+  if ([notification.name isEqualToString:@"getUrl"]) {
     NSString* url = notification.object;
-    [self.delegate getURL:url];
+    dispatch_async(dispatch_get_main_queue(), ^{
+      [self.delegate getURL:url];
+    });
+    
+  }
+  else if ([notification.name isEqualToString:@"showError"]) {
+    dispatch_async(dispatch_get_main_queue(), ^{
+      UIAlertController *alert = [UIAlertController alertControllerWithTitle:Nil message: notification.object preferredStyle:UIAlertControllerStyleAlert];
+      UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action){
+          // Ok action example
+        [self dismissViewControllerAnimated:YES completion:Nil];
+      }];
+      
+      [alert addAction:action];
+      [self presentViewController:alert animated:YES completion:Nil];
+    });
+    
+    
   }
 }
 

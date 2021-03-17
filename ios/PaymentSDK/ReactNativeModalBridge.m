@@ -16,4 +16,9 @@ RCT_EXPORT_METHOD(getUrl:(NSString *) url) {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"getUrl" object:url];
 }
 
+RCT_EXPORT_METHOD(showError:(NSString *) error) {
+    RCTLogInfo(@"Error: %@", error);
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"showError" object:error];
+}
+
 @end

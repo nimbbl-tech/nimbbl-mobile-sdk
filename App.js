@@ -46,20 +46,28 @@ class App extends React.Component {
       body: params
     };
   
-    fetch("https://uatapi.nimbbl.tech/api/v2/verify-access-key", requestOptions)
+    fetch("https://api.nimbbl.tech/api/v2/verify-access-key", requestOptions)
     .then(response => response.json())
     .then(result => {
       console.log(result)
       if (result.access_key_allowed){
-        this.updateOrder()
+        this.updateOrder();
       }
       else{
+        var message = result.error.message;
 
+          if (message){
+
+          }
+          else {
+              message = "Access not allowed";
+          }
+        this.showError(message);
       }
     })
     .catch(error => {
-      console.log('error', error)
-      
+      console.log('error', error);
+      this.showError(error);
     });
   };
 
@@ -75,17 +83,36 @@ class App extends React.Component {
       body: params
     };
   
-    fetch("https://uatapi.nimbbl.tech/api/v2/update-order/" + this.props.orderID, requestOptions)
+    fetch("https://api.nimbbl.tech/api/v2/update-order/" + this.props.orderID, requestOptions)
     .then(response => response.json())
     .then(result => {
       console.log(result)
-      this.setState( { isLoading : false } )
+      if (result.order_id == this.props.orderID){
+        this.setState( { isLoading : false } );
+      }
+      else{
+          var message = result.error.message;
+
+          if (message){
+
+          }
+          else {
+              message = "API error";
+          }
+          this.showError(message);
+      }
     })
     .catch(error => {
-      console.log('error', error)
-      
+      console.log('error', error);
+      this.showError(error);
     });
   };
+
+  showError(error){
+    if (Platform.OS == 'ios') {
+      NativeModules.ReactNativeModalBridge.showError(error);  
+    }
+  }
 
   
 // UI part
