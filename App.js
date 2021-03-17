@@ -12,7 +12,9 @@ import { WebView } from 'react-native-webview';
 import {
   SafeAreaView,
   StatusBar,
-  ActivityIndicator
+  ActivityIndicator,
+  NativeModules,
+  Platform
 } from 'react-native';
 
 
@@ -51,7 +53,9 @@ class App extends React.Component {
       if (result.access_key_allowed){
         this.updateOrder()
       }
-      
+      else{
+
+      }
     })
     .catch(error => {
       console.log('error', error)
@@ -72,7 +76,7 @@ class App extends React.Component {
     };
   
     fetch("https://uatapi.nimbbl.tech/api/v2/update-order/" + this.props.orderID, requestOptions)
-    .then(response => response.text())
+    .then(response => response.json())
     .then(result => {
       console.log(result)
       this.setState( { isLoading : false } )
@@ -93,10 +97,23 @@ class App extends React.Component {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={{ flex:1 }}>
-      {this.state.isLoading ? <ActivityIndicator/> : (
+        {this.state.isLoading ? <ActivityIndicator/> : (
           <WebView 
-          source={{ uri: 'https://checkout.nimbbl.tech/?order_id=' + this.props.orderID }} 
+          source={{ uri: 'https://checkout.nimbbl.tech/?modal=false&order_id=' + this.props.orderID }} 
           onMessage={(event)=> console.log(event.nativeEvent.data)}
+          onLoadProgress={({ path }) => {
+            console.log("current_path",path);      
+          }}
+          onNavigationStateChange={(state) => {
+            console.log("current_url",state.url);  
+            if (Platform.OS == 'ios') {
+              NativeModules.ReactNativeModalBridge.getUrl(state.url);  
+            }
+            else{
+
+            }
+               
+          }} 
           />
         )}
       </SafeAreaView>

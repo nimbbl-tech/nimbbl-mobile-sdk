@@ -3,6 +3,7 @@
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
+#import <React/RCTLog.h>
 
 #ifdef FB_SONARKIT_ENABLED
 #import <FlipperKit/FlipperClient.h>
@@ -25,18 +26,22 @@ static void InitializeFlipper(UIApplication *application) {
 
 @implementation AppDelegate
 
+RCT_EXPORT_MODULE();
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 #ifdef FB_SONARKIT_ENABLED
   InitializeFlipper(application);
 #endif
-  NSDictionary *props = @{ @"orderID": @"1MwvMl1B9AAad7ry", @"accessKey" : @"access_key_1MwvMkKkweorz0ry"};
+  NSDictionary *props = @{ @"orderID": @"BmO74dQ8xzmbW7qx", @"accessKey" : @"access_key_1MwvMkKkweorz0ry"};
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
                                                    moduleName:@"PaymentGateway"
                                             initialProperties:props];
 
   rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
+  
+
 
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   UIViewController *rootViewController = [UIViewController new];
@@ -53,6 +58,12 @@ static void InitializeFlipper(UIApplication *application) {
 #else
   return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
 #endif
+}
+
+RCT_EXPORT_METHOD(getUrl:(NSString *) url )
+{
+  RCTLogInfo(@"Url data: %@", url);
+  NSLog(@"Appdelegate url: %@", url);
 }
 
 @end
