@@ -1,5 +1,5 @@
 /**
- * Sample React Native App
+ * Payment React Native App
  * https://github.com/facebook/react-native
  *
  * @format
@@ -84,7 +84,7 @@ class App extends React.Component {
       body: params
     };
   
-    fetch("https://api.nimbbl.tech/api/v2/update-order/" + this.props.orderID, requestOptions)
+    fetch("https://uatapi.nimbbl.tech/api/v2/update-order/" + this.props.orderID, requestOptions)
     .then(response => response.json())
     .then(result => {
       console.log(result)
@@ -127,7 +127,11 @@ class App extends React.Component {
       <SafeAreaView style={{ flex:1 }}>
         {this.state.isLoading ? <ActivityIndicator/> : (
           <WebView 
-          source={{ uri: 'https://checkout.nimbbl.tech/?modal=false&order_id=' + this.props.orderID }} 
+          source={{ uri: 'https://uatcheckout.nimbbl.tech/?modal=false&order_id=' + this.props.orderID }} 
+          javaScriptEnabled={true} 
+          javaScriptCanOpenWindowsAutomatically={true}
+          setSupportMultipleWindows={true}
+          domStorageEnabled={true}
           onMessage={(event)=> console.log(event.nativeEvent.data)}
           onLoadProgress={({ path }) => {
             console.log("current_path",path);      
