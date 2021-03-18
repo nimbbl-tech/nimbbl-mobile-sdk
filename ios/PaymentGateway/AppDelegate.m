@@ -24,8 +24,8 @@
 
 
 
-- (void)getResponse:(NSString *)url{
-  NSLog(@"Response: %@", url);
+- (void)getResponse:(NSString *) response{
+  NSLog(@"Response: %@", response);
 }
 
 @end

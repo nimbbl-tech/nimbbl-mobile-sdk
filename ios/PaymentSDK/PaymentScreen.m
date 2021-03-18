@@ -44,9 +44,9 @@
 
 -(void) receiveNotification:(NSNotification*)notification{
   if ([notification.name isEqualToString:@"getResponse"]) {
-    NSString* url = notification.object;
+    NSString* response = notification.object;
     dispatch_async(dispatch_get_main_queue(), ^{
-      [self.delegate getResponse:url];
+      [self.delegate getResponse: response];
     });
     
   }

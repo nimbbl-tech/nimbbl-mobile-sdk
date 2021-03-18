@@ -10,8 +10,8 @@
 @implementation ReactNativeModalBridge
 RCT_EXPORT_MODULE();
 
-RCT_EXPORT_METHOD(getResponse:(NSString *) url) {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"getResponse" object:url];
+RCT_EXPORT_METHOD(getResponse:(NSString *) response) {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"getResponse" object:response];
 }
 
 RCT_EXPORT_METHOD(showError:(NSString *) error) {
