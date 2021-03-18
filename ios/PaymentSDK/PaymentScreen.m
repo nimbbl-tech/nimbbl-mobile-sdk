@@ -9,7 +9,7 @@
 #import <React/RCTBridge.h>
 #import <React/RCTRootView.h>
 #import <React/RCTBridgeDelegate.h>
-
+#import <React/RCTBundleURLProvider.h>
 
 
 @interface PaymentScreen () <RCTBridgeDelegate>
@@ -43,10 +43,10 @@
 }
 
 -(void) receiveNotification:(NSNotification*)notification{
-  if ([notification.name isEqualToString:@"getUrl"]) {
+  if ([notification.name isEqualToString:@"getResponse"]) {
     NSString* url = notification.object;
     dispatch_async(dispatch_get_main_queue(), ^{
-      [self.delegate getURL:url];
+      [self.delegate getResponse:url];
     });
     
   }
@@ -61,8 +61,6 @@
       [alert addAction:action];
       [self presentViewController:alert animated:YES completion:Nil];
     });
-    
-    
   }
 }
 

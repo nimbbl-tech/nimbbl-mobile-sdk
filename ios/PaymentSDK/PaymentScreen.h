@@ -10,7 +10,7 @@
 
 
 @protocol PaymentDelegate
-- (void) getURL: (NSString*_Nullable) url;
+- (void) getResponse: (NSString*_Nullable) url;
 @end
 
 NS_ASSUME_NONNULL_BEGIN

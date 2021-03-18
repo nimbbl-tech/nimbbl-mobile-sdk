@@ -6,18 +6,15 @@
 //
 
 #import "ReactNativeModalBridge.h"
-#import <React/RCTLog.h>
 
 @implementation ReactNativeModalBridge
 RCT_EXPORT_MODULE();
 
-RCT_EXPORT_METHOD(getUrl:(NSString *) url) {
-    RCTLogInfo(@"Url in SDK: %@", url);
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"getUrl" object:url];
+RCT_EXPORT_METHOD(getResponse:(NSString *) url) {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"getResponse" object:url];
 }
 
 RCT_EXPORT_METHOD(showError:(NSString *) error) {
-    RCTLogInfo(@"Error: %@", error);
     [[NSNotificationCenter defaultCenter] postNotificationName:@"showError" object:error];
 }
 

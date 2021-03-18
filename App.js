@@ -17,7 +17,8 @@ import {
   Platform
 } from 'react-native';
 
-
+import queryString from 'query-string';
+import base64 from 'react-native-base64';
 
 class App extends React.Component {
 
@@ -46,7 +47,7 @@ class App extends React.Component {
       body: params
     };
   
-    fetch("https://api.nimbbl.tech/api/v2/verify-access-key", requestOptions)
+    fetch("https://uatapi.nimbbl.tech/api/v2/verify-access-key", requestOptions)
     .then(response => response.json())
     .then(result => {
       console.log(result)
@@ -133,13 +134,20 @@ class App extends React.Component {
           }}
           onNavigationStateChange={(state) => {
             console.log("current_url",state.url);  
-            if (Platform.OS == 'ios') {
-              NativeModules.ReactNativeModalBridge.getUrl(state.url);  
-            }
-            else{
-
-            }
-               
+            if (state.url.toLocaleLowerCase().includes('https://uatcheckout.nimbbl.tech/mobile/redirect?response=')){
+              const params = queryString.parseUrl(state.url);
+              console.log("Params",params);
+              const response = params.query.response;
+              console.log("Response",response);
+              const decoded = base64.decode(response);
+              console.log("Decoded",response);
+              if (Platform.OS == 'ios') {
+                NativeModules.ReactNativeModalBridge.getResponse(decoded);  
+              }
+              else{
+  
+              }
+            }   
           }} 
           />
         )}
