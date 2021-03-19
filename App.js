@@ -128,10 +128,10 @@ class App extends React.Component {
         {this.state.isLoading ? <ActivityIndicator/> : (
           <WebView 
           source={{ uri: 'https://uatcheckout.nimbbl.tech/?modal=false&order_id=' + this.props.orderID }} 
+          //source={{ uri: 'https://facebook-login-demo-71f0c.firebaseapp.com' }}
           javaScriptEnabled={true} 
           javaScriptCanOpenWindowsAutomatically={true}
           setSupportMultipleWindows={true}
-          domStorageEnabled={true}
           onMessage={(event)=> console.log(event.nativeEvent.data)}
           onLoadProgress={({ path }) => {
             console.log("current_path",path);      

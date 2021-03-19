@@ -14,7 +14,7 @@
 {
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   PaymentScreen *rootViewController = [[PaymentScreen alloc] init];
-  rootViewController.orderID = @"rQv9VOzxn8Xnq3zg";
+  rootViewController.orderID = @"order_RoQ7Zl9pBrq1P3rg";
   rootViewController.accessKey = @"access_key_1MwvMkKkweorz0ry";
   rootViewController.delegate = self;
   self.window.rootViewController = rootViewController;
