@@ -15,7 +15,7 @@
 		0A47067B25FB853B0081A76E /* PaymentScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A47067825FB853B0081A76E /* PaymentScreen.m */; };
 		0A8A05CE26020D8F00FB907D /* ReactNativeModalBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A05CC26020D8E00FB907D /* ReactNativeModalBridge.m */; };
 		0A8A05CF26020D8F00FB907D /* ReactNativeModalBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A8A05CD26020D8E00FB907D /* ReactNativeModalBridge.h */; };
-		0ADABFF22604F1D700FB2D01 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 0ADABFF12604F1D700FB2D01 /* main.jsbundle */; };
+		0AE264442605F02900E65EF4 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 0AE264432605F02900E65EF4 /* main.jsbundle */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -74,7 +74,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00E356EE1AD99517003FC87E /* PaymentGatewayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaymentGatewayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* PaymentGatewayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentGatewayTests.m; sourceTree = "<group>"; };
@@ -111,7 +110,7 @@
 		0A47067825FB853B0081A76E /* PaymentScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentScreen.m; sourceTree = "<group>"; };
 		0A8A05CC26020D8E00FB907D /* ReactNativeModalBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactNativeModalBridge.m; sourceTree = "<group>"; };
 		0A8A05CD26020D8E00FB907D /* ReactNativeModalBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactNativeModalBridge.h; sourceTree = "<group>"; };
-		0ADABFF12604F1D700FB2D01 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
+		0AE264432605F02900E65EF4 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* PaymentGateway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaymentGateway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = PaymentGateway/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = PaymentGateway/AppDelegate.m; sourceTree = "<group>"; };
@@ -214,7 +213,7 @@
 				0A47067825FB853B0081A76E /* PaymentScreen.m */,
 				0A8A05CD26020D8E00FB907D /* ReactNativeModalBridge.h */,
 				0A8A05CC26020D8E00FB907D /* ReactNativeModalBridge.m */,
-				0ADABFF12604F1D700FB2D01 /* main.jsbundle */,
+				0AE264432605F02900E65EF4 /* main.jsbundle */,
 			);
 			path = PaymentSDK;
 			sourceTree = "<group>";
@@ -222,7 +221,6 @@
 		13B07FAE1A68108700A75B9A /* PaymentGateway */ = {
 			isa = PBXGroup;
 			children = (
-				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -508,7 +506,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0ADABFF22604F1D700FB2D01 /* main.jsbundle in Resources */,
+				0AE264442605F02900E65EF4 /* main.jsbundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

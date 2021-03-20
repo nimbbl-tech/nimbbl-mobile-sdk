@@ -128,16 +128,14 @@ class App extends React.Component {
         {this.state.isLoading ? <ActivityIndicator/> : (
           <WebView 
           source={{ uri: 'https://uatcheckout.nimbbl.tech/?modal=false&order_id=' + this.props.orderID }} 
-          //source={{ uri: 'https://facebook-login-demo-71f0c.firebaseapp.com' }}
           javaScriptEnabled={true} 
           javaScriptCanOpenWindowsAutomatically={true}
           setSupportMultipleWindows={true}
-          onMessage={(event)=> console.log(event.nativeEvent.data)}
-          onLoadProgress={({ path }) => {
-            console.log("current_path",path);      
+          onMessage={(event)=> {
+            console.log("onMessage",event.nativeEvent.data);
           }}
           onNavigationStateChange={(state) => {
-            console.log("current_url",state.url);  
+            console.log("Navigation object",state);
             if (state.url.toLocaleLowerCase().includes('https://uatcheckout.nimbbl.tech/mobile/redirect?response=')){
               const params = queryString.parseUrl(state.url);
               console.log("Params",params);
