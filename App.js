@@ -118,7 +118,8 @@ class App extends React.Component {
   
 // UI part
   render() {
-
+    const paymentUrl = "https://uatcheckout.nimbbl.tech/?modal=false&order_id=";
+    const checkUrl = "https://uatcheckout.nimbbl.tech/mobile/redirect?response=";
     const { isLoading } = this.state;
 
     return (
@@ -127,7 +128,7 @@ class App extends React.Component {
       <SafeAreaView style={{ flex:1 }}>
         {this.state.isLoading ? <ActivityIndicator/> : (
           <WebView 
-          source={{ uri: 'https://uatcheckout.nimbbl.tech/?modal=false&order_id=' + this.props.orderID }} 
+          source={{ uri: this.paymentUrl + this.props.orderID }} 
           javaScriptEnabled={true} 
           javaScriptCanOpenWindowsAutomatically={true}
           setSupportMultipleWindows={true}
@@ -136,7 +137,8 @@ class App extends React.Component {
           }}
           onNavigationStateChange={(state) => {
             console.log("Navigation object",state);
-            if (state.url.toLocaleLowerCase().includes('https://uatcheckout.nimbbl.tech/mobile/redirect?response=')){
+            
+            if (state.url.toLocaleLowerCase().includes(this.checkUrl)){
               const params = queryString.parseUrl(state.url);
               console.log("Params",params);
               const response = params.query.response;
