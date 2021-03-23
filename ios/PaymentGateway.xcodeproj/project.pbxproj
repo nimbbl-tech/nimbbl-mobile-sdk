@@ -8,16 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* PaymentGatewayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* PaymentGatewayTests.m */; };
-		0A4704EA25FB50970081A76E /* PaymentSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A4704E825FB50970081A76E /* PaymentSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A4704ED25FB50970081A76E /* PaymentSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4704E625FB50970081A76E /* PaymentSDK.framework */; };
-		0A4704EE25FB50970081A76E /* PaymentSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4704E625FB50970081A76E /* PaymentSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0A47067925FB853B0081A76E /* PaymentScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A47067625FB853B0081A76E /* PaymentScreen.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A47067B25FB853B0081A76E /* PaymentScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A47067825FB853B0081A76E /* PaymentScreen.m */; };
-		0A8A05CE26020D8F00FB907D /* ReactNativeModalBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A05CC26020D8E00FB907D /* ReactNativeModalBridge.m */; };
-		0A8A05CF26020D8F00FB907D /* ReactNativeModalBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A8A05CD26020D8E00FB907D /* ReactNativeModalBridge.h */; };
-		0AC676C1260875DC00A32213 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC676BF260875DC00A32213 /* Main.storyboard */; };
-		0AC676C2260875DC00A32213 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC676C0260875DC00A32213 /* ViewController.swift */; };
-		0AC676CC26087D7A00A32213 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 0AC676CB26087D7A00A32213 /* main.jsbundle */; };
+		0A5623682609C9EB000B7085 /* NimbblPaymentSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A5623662609C9EB000B7085 /* NimbblPaymentSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A5623772609CA4B000B7085 /* NimbblCheckoutViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A5623752609CA4B000B7085 /* NimbblCheckoutViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A5623782609CA4B000B7085 /* NimbblCheckoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5623762609CA4B000B7085 /* NimbblCheckoutViewController.m */; };
+		0A562458260A00C3000B7085 /* ReactNativeModalBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5623DC2609FBA8000B7085 /* ReactNativeModalBridge.m */; };
+		0A562489260A0582000B7085 /* ReactNativeModalBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A562487260A0581000B7085 /* ReactNativeModalBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A56248A260A0582000B7085 /* ReactNativeModalBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A562488260A0581000B7085 /* ReactNativeModalBridge.m */; };
+		0A5624C9260A2223000B7085 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 0A5624C8260A2223000B7085 /* main.jsbundle */; };
+		0B3411137BDC7B08A34F3B5B /* libPods-NimbblPaymentSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A295F977A57B1A6BF87B7D /* libPods-NimbblPaymentSDK.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -31,7 +29,6 @@
 		A374E13C1D1645DB25668141 /* libPods-PaymentGateway-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA26060BF93A9E45F27253ED /* libPods-PaymentGateway-tvOS.a */; };
 		B010520255FE6CD45F9B0067 /* libPods-PaymentGateway-PaymentGatewayTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A47050325FB51540081A76E /* libPods-PaymentGateway-PaymentGatewayTests.a */; };
 		BDD793A85D023B3C2AA7BC3E /* libPods-PaymentGateway-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A47050525FB51540081A76E /* libPods-PaymentGateway-tvOSTests.a */; };
-		C227A64AD298B5EF048A28F8 /* libPods-PaymentSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51A83AC88A5326606B3F45F1 /* libPods-PaymentSDK.a */; };
 		C82CFE89F4033872D7786A6E /* libPods-PaymentGateway.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A47050625FB51540081A76E /* libPods-PaymentGateway.a */; };
 		D1524632DB9ED245F7C73062 /* libPods-PaymentGateway.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A82A6BC57857A5068876DF /* libPods-PaymentGateway.a */; };
 		DEF5DFB510396D15EBF09C8B /* libPods-PaymentGateway-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA062D0274540AE9ADBC2E55 /* libPods-PaymentGateway-tvOSTests.a */; };
@@ -45,13 +42,6 @@
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = PaymentGateway;
 		};
-		0A4704EB25FB50970081A76E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0A4704E525FB50970081A76E;
-			remoteInfo = PaymentSDK;
-		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
@@ -61,28 +51,11 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		0A4704EF25FB50970081A76E /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				0A4704EE25FB50970081A76E /* PaymentSDK.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		00E356EE1AD99517003FC87E /* PaymentGatewayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaymentGatewayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* PaymentGatewayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentGatewayTests.m; sourceTree = "<group>"; };
 		04ACEDF3F7E19C2EC3AA2CEF /* libPods-PaymentGateway-PaymentGatewayTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PaymentGateway-PaymentGatewayTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A4704E625FB50970081A76E /* PaymentSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PaymentSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A4704E825FB50970081A76E /* PaymentSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentSDK.h; sourceTree = "<group>"; };
-		0A4704E925FB50970081A76E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A4704FF25FB51540081A76E /* libDoubleConversion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libDoubleConversion.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A47050025FB51540081A76E /* libFBReactNativeSpec.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFBReactNativeSpec.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A47050125FB51540081A76E /* libFolly.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFolly.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,26 +81,29 @@
 		0A47051525FB51540081A76E /* libReact-RCTVibration.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTVibration.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A47051625FB51540081A76E /* libReactCommon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReactCommon.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A47051725FB51540081A76E /* libYoga.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libYoga.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A47067625FB853B0081A76E /* PaymentScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentScreen.h; sourceTree = "<group>"; };
-		0A47067825FB853B0081A76E /* PaymentScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentScreen.m; sourceTree = "<group>"; };
-		0A8A05CC26020D8E00FB907D /* ReactNativeModalBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactNativeModalBridge.m; sourceTree = "<group>"; };
-		0A8A05CD26020D8E00FB907D /* ReactNativeModalBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactNativeModalBridge.h; sourceTree = "<group>"; };
+		0A5623642609C9EB000B7085 /* NimbblPaymentSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NimbblPaymentSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A5623662609C9EB000B7085 /* NimbblPaymentSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NimbblPaymentSDK.h; sourceTree = "<group>"; };
+		0A5623672609C9EB000B7085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A5623752609CA4B000B7085 /* NimbblCheckoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NimbblCheckoutViewController.h; sourceTree = "<group>"; };
+		0A5623762609CA4B000B7085 /* NimbblCheckoutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NimbblCheckoutViewController.m; sourceTree = "<group>"; };
+		0A5623DC2609FBA8000B7085 /* ReactNativeModalBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReactNativeModalBridge.m; path = PaymentGateway/ReactNativeModalBridge.m; sourceTree = "<group>"; };
+		0A5623DD2609FBA8000B7085 /* ReactNativeModalBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReactNativeModalBridge.h; path = PaymentGateway/ReactNativeModalBridge.h; sourceTree = "<group>"; };
+		0A562487260A0581000B7085 /* ReactNativeModalBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactNativeModalBridge.h; sourceTree = "<group>"; };
+		0A562488260A0581000B7085 /* ReactNativeModalBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactNativeModalBridge.m; sourceTree = "<group>"; };
+		0A5624C8260A2223000B7085 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		0AC676BE260875DB00A32213 /* PaymentGateway-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PaymentGateway-Bridging-Header.h"; sourceTree = "<group>"; };
-		0AC676BF260875DC00A32213 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = PaymentGateway/Main.storyboard; sourceTree = "<group>"; };
-		0AC676C0260875DC00A32213 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = PaymentGateway/ViewController.swift; sourceTree = "<group>"; };
-		0AC676CB26087D7A00A32213 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* PaymentGateway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaymentGateway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = PaymentGateway/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = PaymentGateway/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = PaymentGateway/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = PaymentGateway/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = PaymentGateway/main.m; sourceTree = "<group>"; };
+		22A295F977A57B1A6BF87B7D /* libPods-NimbblPaymentSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NimbblPaymentSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B290CEEA61A3C316D6851A1 /* Pods-PaymentGateway-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentGateway-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-PaymentGateway-tvOSTests/Pods-PaymentGateway-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* PaymentGateway-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PaymentGateway-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* PaymentGateway-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PaymentGateway-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F0BBC212580930561435EB3 /* Pods-PaymentGateway-PaymentGatewayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentGateway-PaymentGatewayTests.debug.xcconfig"; path = "Target Support Files/Pods-PaymentGateway-PaymentGatewayTests/Pods-PaymentGateway-PaymentGatewayTests.debug.xcconfig"; sourceTree = "<group>"; };
 		45C2898F997A4F689A89F12E /* Pods-PaymentGateway.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentGateway.release.xcconfig"; path = "Target Support Files/Pods-PaymentGateway/Pods-PaymentGateway.release.xcconfig"; sourceTree = "<group>"; };
-		51A83AC88A5326606B3F45F1 /* libPods-PaymentSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PaymentSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72047724BEB11D389E18D0B2 /* Pods-PaymentGateway-PaymentGatewayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentGateway-PaymentGatewayTests.release.xcconfig"; path = "Target Support Files/Pods-PaymentGateway-PaymentGatewayTests/Pods-PaymentGateway-PaymentGatewayTests.release.xcconfig"; sourceTree = "<group>"; };
 		7EEA5989ADBB3A7BFA1DC4EA /* Pods-PaymentGateway-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentGateway-tvOS.release.xcconfig"; path = "Target Support Files/Pods-PaymentGateway-tvOS/Pods-PaymentGateway-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = PaymentGateway/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -136,11 +112,11 @@
 		B9AEFEAC6BBF1AC5F574000C /* Pods-PaymentGateway.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentGateway.debug.xcconfig"; path = "Target Support Files/Pods-PaymentGateway/Pods-PaymentGateway.debug.xcconfig"; sourceTree = "<group>"; };
 		BA26060BF93A9E45F27253ED /* libPods-PaymentGateway-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PaymentGateway-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A82A6BC57857A5068876DF /* libPods-PaymentGateway.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PaymentGateway.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF5CB05984DB4830ECCF0DF7 /* Pods-PaymentSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentSDK.release.xcconfig"; path = "Target Support Files/Pods-PaymentSDK/Pods-PaymentSDK.release.xcconfig"; sourceTree = "<group>"; };
-		E280E2EFC593A835E8CBCC49 /* Pods-PaymentSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentSDK.debug.xcconfig"; path = "Target Support Files/Pods-PaymentSDK/Pods-PaymentSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		C9A9A0E5C0C3BEE4BA2911EE /* Pods-NimbblPaymentSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbblPaymentSDK.release.xcconfig"; path = "Target Support Files/Pods-NimbblPaymentSDK/Pods-NimbblPaymentSDK.release.xcconfig"; sourceTree = "<group>"; };
 		E4E55042E3E1A7ACC3962BA5 /* Pods-PaymentGateway-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaymentGateway-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-PaymentGateway-tvOS/Pods-PaymentGateway-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		F2BC8BA173960D2F8C730973 /* Pods-NimbblPaymentSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimbblPaymentSDK.debug.xcconfig"; path = "Target Support Files/Pods-NimbblPaymentSDK/Pods-NimbblPaymentSDK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,11 +129,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0A4704E325FB50970081A76E /* Frameworks */ = {
+		0A5623612609C9EB000B7085 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C227A64AD298B5EF048A28F8 /* libPods-PaymentSDK.a in Frameworks */,
+				0B3411137BDC7B08A34F3B5B /* libPods-NimbblPaymentSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,7 +141,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A4704ED25FB50970081A76E /* PaymentSDK.framework in Frameworks */,
 				D1524632DB9ED245F7C73062 /* libPods-PaymentGateway.a in Frameworks */,
 				C82CFE89F4033872D7786A6E /* libPods-PaymentGateway.a in Frameworks */,
 			);
@@ -209,18 +184,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0A4704E725FB50970081A76E /* PaymentSDK */ = {
+		0A5623652609C9EB000B7085 /* NimbblPaymentSDK */ = {
 			isa = PBXGroup;
 			children = (
-				0A4704E825FB50970081A76E /* PaymentSDK.h */,
-				0A4704E925FB50970081A76E /* Info.plist */,
-				0A47067625FB853B0081A76E /* PaymentScreen.h */,
-				0A47067825FB853B0081A76E /* PaymentScreen.m */,
-				0A8A05CD26020D8E00FB907D /* ReactNativeModalBridge.h */,
-				0A8A05CC26020D8E00FB907D /* ReactNativeModalBridge.m */,
-				0AC676CB26087D7A00A32213 /* main.jsbundle */,
+				0A5623662609C9EB000B7085 /* NimbblPaymentSDK.h */,
+				0A5623752609CA4B000B7085 /* NimbblCheckoutViewController.h */,
+				0A5623762609CA4B000B7085 /* NimbblCheckoutViewController.m */,
+				0A562487260A0581000B7085 /* ReactNativeModalBridge.h */,
+				0A562488260A0581000B7085 /* ReactNativeModalBridge.m */,
+				0A5623672609C9EB000B7085 /* Info.plist */,
+				0A5624C8260A2223000B7085 /* main.jsbundle */,
 			);
-			path = PaymentSDK;
+			path = NimbblPaymentSDK;
 			sourceTree = "<group>";
 		};
 		13B07FAE1A68108700A75B9A /* PaymentGateway */ = {
@@ -232,8 +207,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
-				0AC676BF260875DC00A32213 /* Main.storyboard */,
-				0AC676C0260875DC00A32213 /* ViewController.swift */,
+				0A5623DD2609FBA8000B7085 /* ReactNativeModalBridge.h */,
+				0A5623DC2609FBA8000B7085 /* ReactNativeModalBridge.m */,
 				0AC676BE260875DB00A32213 /* PaymentGateway-Bridging-Header.h */,
 			);
 			name = PaymentGateway;
@@ -273,7 +248,7 @@
 				04ACEDF3F7E19C2EC3AA2CEF /* libPods-PaymentGateway-PaymentGatewayTests.a */,
 				BA26060BF93A9E45F27253ED /* libPods-PaymentGateway-tvOS.a */,
 				AA062D0274540AE9ADBC2E55 /* libPods-PaymentGateway-tvOSTests.a */,
-				51A83AC88A5326606B3F45F1 /* libPods-PaymentSDK.a */,
+				22A295F977A57B1A6BF87B7D /* libPods-NimbblPaymentSDK.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -289,8 +264,8 @@
 				7EEA5989ADBB3A7BFA1DC4EA /* Pods-PaymentGateway-tvOS.release.xcconfig */,
 				B7947DBE1361ABC4BA47EDD7 /* Pods-PaymentGateway-tvOSTests.debug.xcconfig */,
 				2B290CEEA61A3C316D6851A1 /* Pods-PaymentGateway-tvOSTests.release.xcconfig */,
-				E280E2EFC593A835E8CBCC49 /* Pods-PaymentSDK.debug.xcconfig */,
-				DF5CB05984DB4830ECCF0DF7 /* Pods-PaymentSDK.release.xcconfig */,
+				F2BC8BA173960D2F8C730973 /* Pods-NimbblPaymentSDK.debug.xcconfig */,
+				C9A9A0E5C0C3BEE4BA2911EE /* Pods-NimbblPaymentSDK.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -308,7 +283,7 @@
 				13B07FAE1A68108700A75B9A /* PaymentGateway */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* PaymentGatewayTests */,
-				0A4704E725FB50970081A76E /* PaymentSDK */,
+				0A5623652609C9EB000B7085 /* NimbblPaymentSDK */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				596E4904DB4D24BCF1CEFA74 /* Pods */,
@@ -325,7 +300,7 @@
 				00E356EE1AD99517003FC87E /* PaymentGatewayTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* PaymentGateway-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* PaymentGateway-tvOSTests.xctest */,
-				0A4704E625FB50970081A76E /* PaymentSDK.framework */,
+				0A5623642609C9EB000B7085 /* NimbblPaymentSDK.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -333,13 +308,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0A4704E125FB50970081A76E /* Headers */ = {
+		0A56235F2609C9EB000B7085 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A8A05CF26020D8F00FB907D /* ReactNativeModalBridge.h in Headers */,
-				0A4704EA25FB50970081A76E /* PaymentSDK.h in Headers */,
-				0A47067925FB853B0081A76E /* PaymentScreen.h in Headers */,
+				0A562489260A0582000B7085 /* ReactNativeModalBridge.h in Headers */,
+				0A5623682609C9EB000B7085 /* NimbblPaymentSDK.h in Headers */,
+				0A5623772609CA4B000B7085 /* NimbblCheckoutViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,24 +341,24 @@
 			productReference = 00E356EE1AD99517003FC87E /* PaymentGatewayTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0A4704E525FB50970081A76E /* PaymentSDK */ = {
+		0A5623632609C9EB000B7085 /* NimbblPaymentSDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0A4704F225FB50970081A76E /* Build configuration list for PBXNativeTarget "PaymentSDK" */;
+			buildConfigurationList = 0A56236D2609C9EB000B7085 /* Build configuration list for PBXNativeTarget "NimbblPaymentSDK" */;
 			buildPhases = (
-				2638C13FF7377A86B55F8112 /* [CP] Check Pods Manifest.lock */,
-				0A4704E125FB50970081A76E /* Headers */,
-				0A4704E225FB50970081A76E /* Sources */,
-				0A4704E325FB50970081A76E /* Frameworks */,
-				0A4704E425FB50970081A76E /* Resources */,
-				5BEAF0C48A0F8D21B981F803 /* [CP] Copy Pods Resources */,
+				994EFBA68B2D239BCA39529D /* [CP] Check Pods Manifest.lock */,
+				0A56235F2609C9EB000B7085 /* Headers */,
+				0A5623602609C9EB000B7085 /* Sources */,
+				0A5623612609C9EB000B7085 /* Frameworks */,
+				0A5623622609C9EB000B7085 /* Resources */,
+				C6D2431FFB909B4727900782 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = PaymentSDK;
-			productName = PaymentSDK;
-			productReference = 0A4704E625FB50970081A76E /* PaymentSDK.framework */;
+			name = NimbblPaymentSDK;
+			productName = NimbblPaymentSDK;
+			productReference = 0A5623642609C9EB000B7085 /* NimbblPaymentSDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		13B07F861A680F5B00A75B9A /* PaymentGateway */ = {
@@ -397,12 +372,10 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				C9F245E6F1E72974FD64F534 /* [CP] Copy Pods Resources */,
-				0A4704EF25FB50970081A76E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0A4704EC25FB50970081A76E /* PBXTargetDependency */,
 			);
 			name = PaymentGateway;
 			productName = PaymentGateway;
@@ -460,9 +433,9 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
-					0A4704E525FB50970081A76E = {
+					0A5623632609C9EB000B7085 = {
 						CreatedOnToolsVersion = 12.4;
-						LastSwiftMigration = 1240;
+						DevelopmentTeam = 7BWUT6D2HB;
 						ProvisioningStyle = Automatic;
 					};
 					13B07F861A680F5B00A75B9A = {
@@ -497,7 +470,7 @@
 				00E356ED1AD99517003FC87E /* PaymentGatewayTests */,
 				2D02E47A1E0B4A5D006451C7 /* PaymentGateway-tvOS */,
 				2D02E48F1E0B4A5D006451C7 /* PaymentGateway-tvOSTests */,
-				0A4704E525FB50970081A76E /* PaymentSDK */,
+				0A5623632609C9EB000B7085 /* NimbblPaymentSDK */,
 			);
 		};
 /* End PBXProject section */
@@ -510,11 +483,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0A4704E425FB50970081A76E /* Resources */ = {
+		0A5623622609C9EB000B7085 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AC676CC26087D7A00A32213 /* main.jsbundle in Resources */,
+				0A5624C9260A2223000B7085 /* main.jsbundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,7 +495,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AC676C1260875DC00A32213 /* Main.storyboard in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
@@ -582,28 +554,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2638C13FF7377A86B55F8112 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PaymentSDK-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -640,22 +590,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5BEAF0C48A0F8D21B981F803 /* [CP] Copy Pods Resources */ = {
+		994EFBA68B2D239BCA39529D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PaymentSDK/Pods-PaymentSDK-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+			inputFileListPaths = (
 			);
-			name = "[CP] Copy Pods Resources";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+				"$(DERIVED_FILE_DIR)/Pods-NimbblPaymentSDK-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PaymentSDK/Pods-PaymentSDK-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9E4CE2455B176681410861F8 /* [CP] Check Pods Manifest.lock */ = {
@@ -696,6 +650,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PaymentGateway-PaymentGatewayTests/Pods-PaymentGateway-PaymentGatewayTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6D2431FFB909B4727900782 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NimbblPaymentSDK/Pods-NimbblPaymentSDK-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NimbblPaymentSDK/Pods-NimbblPaymentSDK-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C9F245E6F1E72974FD64F534 /* [CP] Copy Pods Resources */ = {
@@ -787,12 +759,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0A4704E225FB50970081A76E /* Sources */ = {
+		0A5623602609C9EB000B7085 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A47067B25FB853B0081A76E /* PaymentScreen.m in Sources */,
-				0A8A05CE26020D8F00FB907D /* ReactNativeModalBridge.m in Sources */,
+				0A5623782609CA4B000B7085 /* NimbblCheckoutViewController.m in Sources */,
+				0A56248A260A0582000B7085 /* ReactNativeModalBridge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -800,8 +772,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AC676C2260875DC00A32213 /* ViewController.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				0A562458260A00C3000B7085 /* ReactNativeModalBridge.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -831,11 +803,6 @@
 			target = 13B07F861A680F5B00A75B9A /* PaymentGateway */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
-		0A4704EC25FB50970081A76E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0A4704E525FB50970081A76E /* PaymentSDK */;
-			targetProxy = 0A4704EB25FB50970081A76E /* PBXContainerItemProxy */;
-		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2D02E47A1E0B4A5D006451C7 /* PaymentGateway-tvOS */;
@@ -848,7 +815,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2F0BBC212580930561435EB3 /* Pods-PaymentGateway-PaymentGatewayTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -872,7 +838,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 72047724BEB11D389E18D0B2 /* Pods-PaymentGateway-PaymentGatewayTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = PaymentGatewayTests/Info.plist;
@@ -889,14 +854,13 @@
 			};
 			name = Release;
 		};
-		0A4704F025FB50970081A76E /* Debug */ = {
+		0A56236E2609C9EB000B7085 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E280E2EFC593A835E8CBCC49 /* Pods-PaymentSDK.debug.xcconfig */;
+			baseConfigurationReference = F2BC8BA173960D2F8C730973 /* Pods-NimbblPaymentSDK.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
@@ -905,36 +869,33 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7BWUT6D2HB;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = PaymentSDK/Info.plist;
+				INFOPLIST_FILE = NimbblPaymentSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.logicloop.PaymentSDK;
+				PRODUCT_BUNDLE_IDENTIFIER = com.logicloop.NimbblPaymentSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		0A4704F125FB50970081A76E /* Release */ = {
+		0A56236F2609C9EB000B7085 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF5CB05984DB4830ECCF0DF7 /* Pods-PaymentSDK.release.xcconfig */;
+			baseConfigurationReference = C9A9A0E5C0C3BEE4BA2911EE /* Pods-NimbblPaymentSDK.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
@@ -944,20 +905,19 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7BWUT6D2HB;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = PaymentSDK/Info.plist;
+				INFOPLIST_FILE = NimbblPaymentSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.logicloop.PaymentSDK;
+				PRODUCT_BUNDLE_IDENTIFIER = com.logicloop.NimbblPaymentSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1247,11 +1207,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0A4704F225FB50970081A76E /* Build configuration list for PBXNativeTarget "PaymentSDK" */ = {
+		0A56236D2609C9EB000B7085 /* Build configuration list for PBXNativeTarget "NimbblPaymentSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0A4704F025FB50970081A76E /* Debug */,
-				0A4704F125FB50970081A76E /* Release */,
+				0A56236E2609C9EB000B7085 /* Debug */,
+				0A56236F2609C9EB000B7085 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

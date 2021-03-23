@@ -85,22 +85,12 @@ class App extends React.Component {
     };
   
     fetch("https://uatapi.nimbbl.tech/api/v2/update-order/" + this.props.orderID, requestOptions)
-    .then(response => response.json())
-    .then(result => {
-      console.log(result)
-      if (result.order_id == this.props.orderID){
+    .then(response => {
+      if (response.status == 200){
         this.setState( { isLoading : false } );
       }
       else{
-          var message = result.error.message;
-
-          if (message){
-
-          }
-          else {
-              message = "API error";
-          }
-          this.showError(message);
+        this.showError(response.statusText);
       }
     })
     .catch(error => {
@@ -113,13 +103,15 @@ class App extends React.Component {
     if (Platform.OS == 'ios') {
       NativeModules.ReactNativeModalBridge.showError(error);  
     }
+    else{
+
+    }
   }
 
   
 // UI part
   render() {
-    const paymentUrl = "https://uatcheckout.nimbbl.tech/?modal=false&order_id=";
-    const checkUrl = "https://uatcheckout.nimbbl.tech/mobile/redirect?response=";
+    
     const { isLoading } = this.state;
 
     return (
@@ -128,7 +120,7 @@ class App extends React.Component {
       <SafeAreaView style={{ flex:1 }}>
         {this.state.isLoading ? <ActivityIndicator/> : (
           <WebView 
-          source={{ uri: this.paymentUrl + this.props.orderID }} 
+          source={{ uri: "https://uatcheckout.nimbbl.tech/?modal=false&order_id=" + this.props.orderID }} 
           javaScriptEnabled={true} 
           javaScriptCanOpenWindowsAutomatically={true}
           setSupportMultipleWindows={true}
@@ -138,13 +130,11 @@ class App extends React.Component {
           onNavigationStateChange={(state) => {
             console.log("Navigation object",state);
             
-            if (state.url.toLocaleLowerCase().includes(this.checkUrl)){
+            if (state.url.toLowerCase().includes("https://uatcheckout.nimbbl.tech/mobile/redirect?response=")){
               const params = queryString.parseUrl(state.url);
-              console.log("Params",params);
               const response = params.query.response;
-              console.log("Response",response);
               const decoded = base64.decode(response);
-              console.log("Decoded",response);
+              console.log("Decoded",decoded);
               if (Platform.OS == 'ios') {
                 NativeModules.ReactNativeModalBridge.getResponse(decoded);  
               }
