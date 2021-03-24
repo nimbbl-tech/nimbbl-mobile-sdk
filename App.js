@@ -141,16 +141,27 @@ class App extends React.Component {
             console.log("Navigation object",state);
             
             if (state.url.toLowerCase().includes("https://uatcheckout.nimbbl.tech/mobile/redirect?response=")){
-              const params = queryString.parseUrl(state.url);
-              const response = params.query.response;
-              const decoded = base64.decode(response);
+              let params = queryString.parseUrl(state.url);
+              let response = params.query.response;
+              let decoded = base64.decode(response);
               console.log("Decoded",decoded);
-              if (Platform.OS == 'ios') {
-                NativeModules.ReactNativeModalBridge.getResponse(decoded);  
+              try {
+                let responseData = JSON.parse(decoded);
+                let payload = responseData.payload
+                console.log("Payload",payload);
+                if (Platform.OS == 'ios') {
+                  NativeModules.ReactNativeModalBridge.onResponse(payload);  
+                }
+                else{
+    
+                }
+              } 
+              catch (ex) {
+                console.error(ex);
               }
-              else{
-  
-              }
+              
+              
+              
             }   
           }} 
           />

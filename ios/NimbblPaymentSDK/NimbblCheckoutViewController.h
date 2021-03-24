@@ -6,11 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@protocol NimbblPaymentDelegate
-- (void) onPaymentResponse: (NSString*_Nullable) response;
-- (void) onPaymentCancel;
-@end
+#import "NimbblPaymentProtocol.h"
 
 
 @interface NimbblCheckoutViewController : UIViewController

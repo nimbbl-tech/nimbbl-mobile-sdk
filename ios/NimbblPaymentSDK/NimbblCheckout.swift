@@ -23,7 +23,7 @@ import UIKit
     props["accessKey"] = accessKey
     let vc = NimbblCheckoutViewController(options: props, delegate: self.delegate)
     vc.modalPresentationStyle = .overFullScreen
-    displayController.present(vc, animated: true, completion: nil)
+    displayController.present(vc, animated: false, completion: nil)
   }
   
 }

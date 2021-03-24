@@ -34,7 +34,7 @@ static void InitializeFlipper(UIApplication *application) {
 #ifdef FB_SONARKIT_ENABLED
   InitializeFlipper(application);
 #endif
-  NSDictionary *props = @{ @"orderID": @"11", @"accessKey" : @"access_key_1MwvMkKkweorz0ry"};
+  NSDictionary *props = @{ @"orderID": @"order_mZR7lYEnBRj2Lv9p", @"accessKey" : @"access_key_1MwvMkKkweorz0ry"};
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
                                                    moduleName:@"PaymentGateway"
@@ -62,7 +62,7 @@ static void InitializeFlipper(UIApplication *application) {
 -(void) receiveNotification:(NSNotification*)notification{
   
   if ([notification.name isEqualToString:@"getResponse"]) {
-    NSString* response = notification.object;
+    NSDictionary* response = notification.object;
     NSLog(@"Response: %@", response);
    
     

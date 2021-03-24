@@ -11,6 +11,7 @@
 #import <React/RCTBridgeDelegate.h>
 #import <React/RCTBundleURLProvider.h>
 
+
 @interface NimbblCheckoutViewController ()<RCTBridgeDelegate> {
   NSDictionary<NSString*,id> *props;
   id<NimbblPaymentDelegate> paymentDelegate;
@@ -19,6 +20,11 @@
 @end
 
 @implementation NimbblCheckoutViewController
+
+- (void)dealloc
+{
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 - (instancetype)initWithOptions:(NSDictionary<NSString *,id> *)options delegate:(id<NimbblPaymentDelegate>)delegate
 {
@@ -34,8 +40,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
   
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"getResponse" object:nil];
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"onErrorPopup" object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"onResponse" object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"onErrorPopUp" object:nil];
   
   [self setUpReactNative];
 }
@@ -51,18 +57,17 @@
 }
 
 -(void) receiveNotification:(NSNotification*)notification{
-  if ([notification.name isEqualToString:@"getResponse"]) {
-    NSString* response = notification.object;
+  if ([notification.name isEqualToString:@"onResponse"]) {
+    NSDictionary* response = notification.object;
     dispatch_async(dispatch_get_main_queue(), ^{
-      [self dismissViewControllerAnimated:YES completion:^{
+      [self dismissViewControllerAnimated:NO completion:^{
         [self->paymentDelegate onPaymentResponse: response];
       }];
-      
     });
   }
-  else if ([notification.name isEqualToString:@"onErrorPopup"]) {
+  else if ([notification.name isEqualToString:@"onErrorPopUp"]) {
     dispatch_async(dispatch_get_main_queue(), ^{
-      [self dismissViewControllerAnimated:YES completion:Nil];
+      [self dismissViewControllerAnimated:NO completion:Nil];
     });
   }
 }

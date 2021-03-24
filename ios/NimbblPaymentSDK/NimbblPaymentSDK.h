@@ -17,3 +17,4 @@ FOUNDATION_EXPORT const unsigned char NimbblPaymentSDKVersionString[];
 
 
 #import <NimbblPaymentSDK/NimbblCheckoutViewController.h>
+#import <NimbblPaymentSDK/NimbblPaymentProtocol.h>
