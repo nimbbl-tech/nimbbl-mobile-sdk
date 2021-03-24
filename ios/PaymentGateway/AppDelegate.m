@@ -29,12 +29,12 @@ static void InitializeFlipper(UIApplication *application) {
 {
   
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"getResponse" object:nil];
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"showError" object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"onErrorPopup" object:nil];
   
 #ifdef FB_SONARKIT_ENABLED
   InitializeFlipper(application);
 #endif
-  NSDictionary *props = @{ @"orderID": @"order_XDZ0XpzqlEAz20bY", @"accessKey" : @"access_key_1MwvMkKkweorz0ry"};
+  NSDictionary *props = @{ @"orderID": @"11", @"accessKey" : @"access_key_1MwvMkKkweorz0ry"};
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
                                                    moduleName:@"PaymentGateway"
@@ -60,16 +60,15 @@ static void InitializeFlipper(UIApplication *application) {
 }
 
 -(void) receiveNotification:(NSNotification*)notification{
-  NSString* response = notification.object;
-  NSLog(@"Response: %@", response);
-  if ([notification.name isEqualToString:@"getResponse"]) {
   
-    
+  if ([notification.name isEqualToString:@"getResponse"]) {
+    NSString* response = notification.object;
+    NSLog(@"Response: %@", response);
    
     
   }
-  else if ([notification.name isEqualToString:@"showError"]) {
-   
+  else if ([notification.name isEqualToString:@"onErrorPopUp"]) {
+    NSLog(@"error called");
   }
 }
 

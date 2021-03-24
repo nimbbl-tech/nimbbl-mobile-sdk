@@ -35,7 +35,7 @@
     // Do any additional setup after loading the view.
   
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"getResponse" object:nil];
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"showError" object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"onErrorPopup" object:nil];
   
   [self setUpReactNative];
 }
@@ -59,18 +59,10 @@
       }];
       
     });
-    
   }
-  else if ([notification.name isEqualToString:@"showError"]) {
+  else if ([notification.name isEqualToString:@"onErrorPopup"]) {
     dispatch_async(dispatch_get_main_queue(), ^{
-      UIAlertController *alert = [UIAlertController alertControllerWithTitle:Nil message: notification.object preferredStyle:UIAlertControllerStyleAlert];
-      UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action){
-          // Ok action example
-        [self dismissViewControllerAnimated:YES completion:Nil];
-      }];
-      
-      [alert addAction:action];
-      [self presentViewController:alert animated:YES completion:Nil];
+      [self dismissViewControllerAnimated:YES completion:Nil];
     });
   }
 }

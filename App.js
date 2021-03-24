@@ -14,7 +14,8 @@ import {
   StatusBar,
   ActivityIndicator,
   NativeModules,
-  Platform
+  Platform,
+  Alert
 } from 'react-native';
 
 import queryString from 'query-string';
@@ -90,7 +91,7 @@ class App extends React.Component {
         this.setState( { isLoading : false } );
       }
       else{
-        this.showError(response.statusText);
+        this.showError("No order found");
       }
     })
     .catch(error => {
@@ -100,12 +101,21 @@ class App extends React.Component {
   };
 
   showError(error){
-    if (Platform.OS == 'ios') {
-      NativeModules.ReactNativeModalBridge.showError(error);  
-    }
-    else{
-
-    }
+    Alert.alert(
+      "",
+      error,
+      [
+        { text: "OK", onPress: () => {
+          if (Platform.OS == 'ios') {
+            NativeModules.ReactNativeModalBridge.onErrorPopUp();  
+          }
+          else{
+      
+          }
+        }}
+      ]
+    )
+    
   }
 
   

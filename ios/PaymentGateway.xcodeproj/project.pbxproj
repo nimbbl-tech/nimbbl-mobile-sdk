@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* PaymentGatewayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* PaymentGatewayTests.m */; };
-		0A5623682609C9EB000B7085 /* NimbblPaymentSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A5623662609C9EB000B7085 /* NimbblPaymentSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A5623772609CA4B000B7085 /* NimbblCheckoutViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A5623752609CA4B000B7085 /* NimbblCheckoutViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A291CA3260B323600C0B7EF /* NimbblCheckout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A291CA2260B323600C0B7EF /* NimbblCheckout.swift */; };
+		0A291CCD260B35AD00C0B7EF /* NimbblCheckoutViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A5623752609CA4B000B7085 /* NimbblCheckoutViewController.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		0A291CD3260B35B400C0B7EF /* ReactNativeModalBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A562487260A0581000B7085 /* ReactNativeModalBridge.h */; };
+		0A5623682609C9EB000B7085 /* NimbblPaymentSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A5623662609C9EB000B7085 /* NimbblPaymentSDK.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		0A5623782609CA4B000B7085 /* NimbblCheckoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5623762609CA4B000B7085 /* NimbblCheckoutViewController.m */; };
 		0A562458260A00C3000B7085 /* ReactNativeModalBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5623DC2609FBA8000B7085 /* ReactNativeModalBridge.m */; };
-		0A562489260A0582000B7085 /* ReactNativeModalBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A562487260A0581000B7085 /* ReactNativeModalBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A56248A260A0582000B7085 /* ReactNativeModalBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A562488260A0581000B7085 /* ReactNativeModalBridge.m */; };
 		0A5624C9260A2223000B7085 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 0A5624C8260A2223000B7085 /* main.jsbundle */; };
 		0B3411137BDC7B08A34F3B5B /* libPods-NimbblPaymentSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A295F977A57B1A6BF87B7D /* libPods-NimbblPaymentSDK.a */; };
@@ -56,6 +57,7 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* PaymentGatewayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentGatewayTests.m; sourceTree = "<group>"; };
 		04ACEDF3F7E19C2EC3AA2CEF /* libPods-PaymentGateway-PaymentGatewayTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PaymentGateway-PaymentGatewayTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A291CA2260B323600C0B7EF /* NimbblCheckout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimbblCheckout.swift; sourceTree = "<group>"; };
 		0A4704FF25FB51540081A76E /* libDoubleConversion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libDoubleConversion.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A47050025FB51540081A76E /* libFBReactNativeSpec.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFBReactNativeSpec.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A47050125FB51540081A76E /* libFolly.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFolly.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,6 +194,7 @@
 				0A5623762609CA4B000B7085 /* NimbblCheckoutViewController.m */,
 				0A562487260A0581000B7085 /* ReactNativeModalBridge.h */,
 				0A562488260A0581000B7085 /* ReactNativeModalBridge.m */,
+				0A291CA2260B323600C0B7EF /* NimbblCheckout.swift */,
 				0A5623672609C9EB000B7085 /* Info.plist */,
 				0A5624C8260A2223000B7085 /* main.jsbundle */,
 			);
@@ -312,9 +315,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A562489260A0582000B7085 /* ReactNativeModalBridge.h in Headers */,
 				0A5623682609C9EB000B7085 /* NimbblPaymentSDK.h in Headers */,
-				0A5623772609CA4B000B7085 /* NimbblCheckoutViewController.h in Headers */,
+				0A291CCD260B35AD00C0B7EF /* NimbblCheckoutViewController.h in Headers */,
+				0A291CD3260B35B400C0B7EF /* ReactNativeModalBridge.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +439,7 @@
 					0A5623632609C9EB000B7085 = {
 						CreatedOnToolsVersion = 12.4;
 						DevelopmentTeam = 7BWUT6D2HB;
+						LastSwiftMigration = 1240;
 						ProvisioningStyle = Automatic;
 					};
 					13B07F861A680F5B00A75B9A = {
@@ -763,6 +767,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A291CA3260B323600C0B7EF /* NimbblCheckout.swift in Sources */,
 				0A5623782609CA4B000B7085 /* NimbblCheckoutViewController.m in Sources */,
 				0A56248A260A0582000B7085 /* ReactNativeModalBridge.m in Sources */,
 			);
@@ -861,6 +866,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
@@ -876,13 +882,16 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = NimbblPaymentSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.logicloop.NimbblPaymentSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -896,6 +905,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
@@ -912,12 +922,14 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = NimbblPaymentSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.logicloop.NimbblPaymentSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

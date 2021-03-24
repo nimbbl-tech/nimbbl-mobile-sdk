@@ -9,6 +9,7 @@
 
 @protocol NimbblPaymentDelegate
 - (void) onPaymentResponse: (NSString*_Nullable) response;
+- (void) onPaymentCancel;
 @end
 
 
