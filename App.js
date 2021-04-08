@@ -107,7 +107,7 @@ class App extends React.Component {
       [
         { text: "OK", onPress: () => {
           if (Platform.OS == 'ios') {
-            NativeModules.ReactNativeModalBridge.onErrorPopUp();  
+            NativeModules.ReactNativeModalBridge.onError();  
           }
           else{
       
