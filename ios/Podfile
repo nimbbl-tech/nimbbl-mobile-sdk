@@ -34,7 +34,7 @@ target 'PaymentGateway-tvOS' do
   end
 end
 
-target 'NimbblPaymentSDK' do
+target 'NimbblCheckoutSDK' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
