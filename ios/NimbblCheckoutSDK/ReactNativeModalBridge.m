@@ -14,7 +14,7 @@ RCT_EXPORT_METHOD(onResponse:(NSDictionary *) response) {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"onResponse" object:response];
 }
 
-RCT_EXPORT_METHOD(onErrorPopUp) {
+RCT_EXPORT_METHOD(onError) {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"onErrorPopUp" object:nil];
 }
 

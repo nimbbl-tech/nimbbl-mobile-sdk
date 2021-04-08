@@ -52,7 +52,7 @@
 
 - (void) setUpReactNative {
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:nil];
-  RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge moduleName:@"PaymentGateway" initialProperties:props];
+  RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge moduleName:@"Nimbbl" initialProperties:props];
   self.view = rootView;
 }
 

@@ -101,7 +101,9 @@ class App extends React.Component {
   };
 
   showError(error){
-    Alert.alert(
+    NativeModules.ReactNativeModalBridge.onError(error); 
+
+    /*Alert.alert(
       "",
       error,
       [
@@ -114,7 +116,7 @@ class App extends React.Component {
           }
         }}
       ]
-    )
+    )*/
     
   }
 
@@ -149,12 +151,12 @@ class App extends React.Component {
                 let responseData = JSON.parse(decoded);
                 let payload = responseData.payload
                 console.log("Payload",payload);
-                if (Platform.OS == 'ios') {
+                //if (Platform.OS == 'ios') {
                   NativeModules.ReactNativeModalBridge.onResponse(payload);  
-                }
-                else{
+                //}
+                //else{
     
-                }
+                //}
               } 
               catch (ex) {
                 console.error(ex);

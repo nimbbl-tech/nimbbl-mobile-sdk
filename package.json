@@ -1,5 +1,5 @@
 {
-  "name": "PaymentGateway",
+  "name": "Nimbbl",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -15,7 +15,8 @@
     "react": "16.13.1",
     "react-native": "0.63.4",
     "react-native-base64": "^0.2.1",
-    "react-native-webview": "11.0.0"
+    "react-native-webview": "11.3.1",
+    "react-native-safe-area-context": "3.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.13.10",
