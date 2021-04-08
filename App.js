@@ -136,9 +136,6 @@ class App extends React.Component {
           javaScriptEnabled={true} 
           javaScriptCanOpenWindowsAutomatically={true}
           setSupportMultipleWindows={true}
-          onMessage={(event)=> {
-            console.log("onMessage",event.nativeEvent.data);
-          }}
           onNavigationStateChange={(state) => {
             console.log("Navigation object",state);
             
@@ -151,19 +148,12 @@ class App extends React.Component {
                 let responseData = JSON.parse(decoded);
                 let payload = responseData.payload
                 console.log("Payload",payload);
-                //if (Platform.OS == 'ios') {
-                  NativeModules.ReactNativeModalBridge.onResponse(payload);  
-                //}
-                //else{
-    
-                //}
+                NativeModules.ReactNativeModalBridge.onResponse(payload);  
               } 
               catch (ex) {
                 console.error(ex);
+                this.showError("Invalid Payment Response");
               }
-              
-              
-              
             }   
           }} 
           />

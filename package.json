@@ -8,7 +8,7 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
-    "build:ios": "react-native bundle --entry-file='index.js' --bundle-output='./ios/NimbblPaymentSDK/main.jsbundle' --dev=false --platform='ios'"
+    "build:ios": "react-native bundle --entry-file='index.js' --bundle-output='./ios/NimbblCheckoutSDK/main.jsbundle' --dev=false --platform='ios'"
   },
   "dependencies": {
     "query-string": "^6.14.1",

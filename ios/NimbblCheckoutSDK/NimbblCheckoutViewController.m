@@ -14,7 +14,7 @@
 
 @interface NimbblCheckoutViewController ()<RCTBridgeDelegate> {
   NSDictionary<NSString*,id> *props;
-  id<NimbblCheckoutDelegate> paymentDelegate;
+  id<NimbblCheckoutDelegate> checkoutDelegate;
 }
 
 @end
@@ -31,7 +31,7 @@
     self = [super init];
     if (self){
       props = options;
-      paymentDelegate = delegate;
+      checkoutDelegate = delegate;
     }
     return self;
 }
@@ -41,7 +41,7 @@
     // Do any additional setup after loading the view.
   
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"onResponse" object:nil];
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"onErrorPopUp" object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"onError" object:nil];
   
   [self setUpReactNative];
 }
@@ -61,13 +61,16 @@
     NSDictionary* response = notification.object;
     dispatch_async(dispatch_get_main_queue(), ^{
       [self dismissViewControllerAnimated:NO completion:^{
-        [self->paymentDelegate onPaymentResponse: response];
+        [self->checkoutDelegate onPaymentResponse: response];
       }];
     });
   }
-  else if ([notification.name isEqualToString:@"onErrorPopUp"]) {
+  else if ([notification.name isEqualToString:@"onError"]) {
+    NSString* error = notification.object;
     dispatch_async(dispatch_get_main_queue(), ^{
-      [self dismissViewControllerAnimated:NO completion:Nil];
+      [self dismissViewControllerAnimated:NO completion:^{
+        [self->checkoutDelegate onError:error];
+      }];
     });
   }
 }
