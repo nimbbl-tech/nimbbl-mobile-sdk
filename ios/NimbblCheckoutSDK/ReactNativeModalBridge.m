@@ -11,7 +11,7 @@
 RCT_EXPORT_MODULE();
 
 RCT_EXPORT_METHOD(onResponse:(NSDictionary *) response) {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"onResponse" object:response];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"onPaymentSuccess" object:response];
 }
 
 RCT_EXPORT_METHOD(onError:(NSString *) error) {

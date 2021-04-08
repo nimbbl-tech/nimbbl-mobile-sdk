@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 
 @protocol NimbblCheckoutDelegate
-- (void) onPaymentResponse: (NSDictionary*_Nonnull) response;
+- (void) onPaymentSuccess: (NSDictionary*_Nonnull) response;
 - (void) onError: (NSString*_Nonnull) error;
 @end
 

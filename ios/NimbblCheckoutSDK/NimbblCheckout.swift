@@ -10,8 +10,8 @@ import UIKit
 
 @objc open class NimbblCheckout: NSObject {
   
-  fileprivate var accessKey: String!
-  fileprivate var delegate: NimbblCheckoutDelegate!
+  fileprivate var accessKey: String
+  fileprivate var delegate: NimbblCheckoutDelegate
   
   @objc public init(accessKey: String, delegate: NimbblCheckoutDelegate){
     self.accessKey = accessKey

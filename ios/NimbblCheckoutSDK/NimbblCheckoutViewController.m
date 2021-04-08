@@ -40,7 +40,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
   
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"onResponse" object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"onPaymentSuccess" object:nil];
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"onError" object:nil];
   
   [self setUpReactNative];
@@ -57,11 +57,11 @@
 }
 
 -(void) receiveNotification:(NSNotification*)notification{
-  if ([notification.name isEqualToString:@"onResponse"]) {
+  if ([notification.name isEqualToString:@"onPaymentSuccess"]) {
     NSDictionary* response = notification.object;
     dispatch_async(dispatch_get_main_queue(), ^{
       [self dismissViewControllerAnimated:NO completion:^{
-        [self->checkoutDelegate onPaymentResponse: response];
+        [self->checkoutDelegate onPaymentSuccess: response];
       }];
     });
   }

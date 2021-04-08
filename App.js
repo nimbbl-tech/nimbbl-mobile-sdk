@@ -148,11 +148,23 @@ class App extends React.Component {
                 let responseData = JSON.parse(decoded);
                 let payload = responseData.payload
                 console.log("Payload",payload);
-                NativeModules.ReactNativeModalBridge.onResponse(payload);  
+                if (payload.status.toLowerCase() == 'success'){
+                  NativeModules.ReactNativeModalBridge.onResponse(payload);
+                }
+                else {
+                  var message = payload.reason;
+                  if (message) {
+
+                  }
+                  else{
+                    message = "Invalid payment response"
+                  }
+                  this.showError(message);
+                }  
               } 
               catch (ex) {
                 console.error(ex);
-                this.showError("Invalid Payment Response");
+                this.showError("Invalid payment response");
               }
             }   
           }} 
