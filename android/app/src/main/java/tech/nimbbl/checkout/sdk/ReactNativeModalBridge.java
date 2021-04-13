@@ -9,6 +9,9 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
+import com.facebook.react.bridge.ReadableMap;
+import com.facebook.react.bridge.ReadableNativeMap;
+
 import java.util.Map;
 import java.util.HashMap;
 
@@ -25,11 +28,11 @@ public class ReactNativeModalBridge extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void onResponse(String data) {
-        Log.d("Nimbbl SDK getResponse",data);
+    public void onResponse(ReadableMap data) {
+        //Log.d("Nimbbl SDK getResponse");
         Intent i = new Intent();
         i.setAction("PaymentSuccess");
-        i.putExtra("data", data);
+        i.putExtra("data", data.toHashMap());
         ctx.sendBroadcast(i);
     }
 

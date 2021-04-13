@@ -135,8 +135,8 @@ android {
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 2
-        versionName "1.2"
+        versionCode 1
+        versionName "1.0"
         setProperty("archivesBaseName", "${project.name}")
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
@@ -343,9 +343,16 @@ publishing {
         maven {
             url rootProject.ext.mavenRepo
             if (!rootProject.ext.mavenRepo.startsWith("file")) {
-                credentials {
+                /*credentials {
                     username rootProject.ext.mavenUser
                     password rootProject.ext.mavenPassword
+                }*/
+                credentials(HttpHeaderCredentials) {
+                    name = "Private-Token"
+                    value = rootProject.ext.gitlabToken
+                }
+                authentication {
+                    header(HttpHeaderAuthentication)
                 }
             }
         }

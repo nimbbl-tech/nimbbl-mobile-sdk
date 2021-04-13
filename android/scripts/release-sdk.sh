@@ -2,7 +2,8 @@
 
 set -e -u
 
-
+MVN_REPO="https://gitlab.com/api/v4/projects/25847308/packages/maven"
+MVN_REPO_ID="gitlab-maven"
 THIS_DIR=$(cd -P "$(dirname "$(readlink "${BASH_SOURCE[0]}" || echo "${BASH_SOURCE[0]}")")" && pwd)
 DEFAULT_MVN_REPO="${THIS_DIR}/../../../jitsi-maven-repository/releases"
 THE_MVN_REPO=${MVN_REPO:-${1:-$DEFAULT_MVN_REPO}}
