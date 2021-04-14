@@ -9,13 +9,11 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* PaymentGatewayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* PaymentGatewayTests.m */; };
 		0A562458260A00C3000B7085 /* ReactNativeModalBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5623DC2609FBA8000B7085 /* ReactNativeModalBridge.m */; };
-		0A85F4A5261ECB6A0023A431 /* NimbblCheckoutSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A85F4A3261ECB6A0023A431 /* NimbblCheckoutSDK.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		0A85F4A5261ECB6A0023A431 /* NimbblCheckoutSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A85F4A3261ECB6A0023A431 /* NimbblCheckoutSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A85F4E2261ECE5D0023A431 /* NimbblCheckoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A85F4DD261ECE5D0023A431 /* NimbblCheckoutViewController.m */; };
-		0A85F4E3261ECE5D0023A431 /* NimbblCheckoutViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A85F4DE261ECE5D0023A431 /* NimbblCheckoutViewController.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		0A85F4E4261ECE5D0023A431 /* ReactNativeModalBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A85F4DF261ECE5D0023A431 /* ReactNativeModalBridge.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		0A85F4E3261ECE5D0023A431 /* NimbblCheckoutViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A85F4DE261ECE5D0023A431 /* NimbblCheckoutViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A85F4E5261ECE5D0023A431 /* ReactNativeModalBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A85F4E0261ECE5D0023A431 /* ReactNativeModalBridge.m */; };
 		0A85F4E6261ECE5D0023A431 /* NimbblCheckout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A85F4E1261ECE5D0023A431 /* NimbblCheckout.swift */; };
-		0A85F4FE261ED3320023A431 /* ReactNativeModalBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A5623DD2609FBA8000B7085 /* ReactNativeModalBridge.h */; };
 		0A85F54A261F1CF70023A431 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 0A85F549261F1CF70023A431 /* main.jsbundle */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -316,10 +314,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A85F4E4261ECE5D0023A431 /* ReactNativeModalBridge.h in Headers */,
 				0A85F4A5261ECB6A0023A431 /* NimbblCheckoutSDK.h in Headers */,
 				0A85F4E3261ECE5D0023A431 /* NimbblCheckoutViewController.h in Headers */,
-				0A85F4FE261ED3320023A431 /* ReactNativeModalBridge.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
