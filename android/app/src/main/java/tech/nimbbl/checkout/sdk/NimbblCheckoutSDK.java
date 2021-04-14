@@ -64,7 +64,7 @@ public class NimbblCheckoutSDK {
             Handler handler = new Handler(Looper.getMainLooper());
             handler.post(new Runnable() {
                 public void run() {
-                    ((NimbblCheckoutMainActivity)myActivityReference.get()).onBackPressed();
+                    ((NimbblCheckoutMainActivity)myActivityReference.get()).finish();
                 }
             });
         }
@@ -78,14 +78,17 @@ public class NimbblCheckoutSDK {
 
         @Override
         public void onReceive(Context context, Intent intent) {
+            if(myActivityReference.get() != null) {
+                dismissReactActivity();
+            }
             String action = intent.getAction();
             if(action.equals("PaymentSuccess")){
                 Log.d("Nimbbl SDK","payment callback");
-                Log.d("Nimbbl SDK",intent.getStringExtra("data"));
+                //Log.d("Nimbbl SDK",intent.getStringExtra("data"));
 
                 try {
-                    listener.onPaymentSuccess(jsonString2Map(intent.getStringExtra("data")));
-                } catch (JSONException e) {
+                    listener.onPaymentSuccess((HashMap<String, Object>)intent.getSerializableExtra("data"));
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
@@ -93,10 +96,6 @@ public class NimbblCheckoutSDK {
                 listener.onPaymentFailed(intent.getStringExtra("data"));
             }
             context.unregisterReceiver(receiver);
-            if(myActivityReference.get() != null) {
-                dismissReactActivity();
-            }
-
         }
     }
 

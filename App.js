@@ -48,7 +48,7 @@ class App extends React.Component {
       body: params
     };
   
-    fetch("https://uatapi.nimbbl.tech/api/v2/verify-access-key", requestOptions)
+    fetch("https://api.nimbbl.tech/api/v2/verify-access-key", requestOptions)
     .then(response => response.json())
     .then(result => {
       console.log(result)
@@ -85,7 +85,7 @@ class App extends React.Component {
       body: params
     };
   
-    fetch("https://uatapi.nimbbl.tech/api/v2/update-order/" + this.props.orderID, requestOptions)
+    fetch("https://api.nimbbl.tech/api/v2/update-order/" + this.props.orderID, requestOptions)
     .then(response => {
       if (response.status == 200){
         this.setState( { isLoading : false } );
@@ -132,14 +132,62 @@ class App extends React.Component {
       <SafeAreaView style={{ flex:1 }}>
         {this.state.isLoading ? <ActivityIndicator/> : (
           <WebView 
-          source={{ uri: "https://uatcheckout.nimbbl.tech/?modal=false&order_id=" + this.props.orderID }} 
-          javaScriptEnabled={true} 
+          source={{ uri: "https://checkout.nimbbl.tech/?modal=false&order_id=" + this.props.orderID }} 
+          javaScriptEnabled={true}
+          javaScriptEnabledAndroid={true}
           javaScriptCanOpenWindowsAutomatically={true}
           setSupportMultipleWindows={true}
+          domStorageEnabled={true}
+          injectedJavaScript={`
+          (function() {
+            function wrap(fn) {
+              return function wrapper() {
+                var res = fn.apply(this, arguments);
+                window.ReactNativeWebView.postMessage(window.location.href);
+                return res;
+              }
+            }
+            history.pushState = wrap(history.pushState);
+            history.replaceState = wrap(history.replaceState);
+          })();
+          true;
+        `}
+        onMessage={(event)=> {
+          var event_url=event.nativeEvent.data;
+          console.log("event_url="+event_url)
+          if (event_url.toLowerCase().includes('https://checkout.nimbbl.tech/mobile/redirect?response=')){
+            const params = queryString.parseUrl(event_url);
+            const response = params.query.response;
+            const decoded = base64.decode(response);
+            console.log("Decoded",decoded);
+            try {
+              let responseData = JSON.parse(decoded);
+              let payload = responseData.payload
+              console.log("Payload",payload);
+              if (payload.status.toLowerCase() == 'success'){
+                NativeModules.ReactNativeModalBridge.onResponse(payload);
+              }
+              else {
+                var message = payload.reason;
+                if (message) {
+
+                }
+                else{
+                  message = "Invalid payment response"
+                }
+                this.showError(message);
+              }  
+            } 
+            catch (ex) {
+              console.error(ex);
+              this.showError("Invalid payment response");
+            }
+          }
+        }}
           onNavigationStateChange={(state) => {
             console.log("Navigation object",state);
             
-            if (state.url.toLowerCase().includes("https://uatcheckout.nimbbl.tech/mobile/redirect?response=")){
+            if (state.url.toLowerCase().includes("https://checkout.nimbbl.tech/mobile/redirect?response=")){
               let params = queryString.parseUrl(state.url);
               let response = params.query.response;
               let decoded = base64.decode(response);
