@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* PaymentGatewayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* PaymentGatewayTests.m */; };
+		0A0B7D7226341CA30099734B /* ReactNativeModalBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A5623DD2609FBA8000B7085 /* ReactNativeModalBridge.h */; };
 		0A562458260A00C3000B7085 /* ReactNativeModalBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5623DC2609FBA8000B7085 /* ReactNativeModalBridge.m */; };
 		0A85F4A5261ECB6A0023A431 /* NimbblCheckoutSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A85F4A3261ECB6A0023A431 /* NimbblCheckoutSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A85F4E2261ECE5D0023A431 /* NimbblCheckoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A85F4DD261ECE5D0023A431 /* NimbblCheckoutViewController.m */; };
@@ -316,6 +317,7 @@
 			files = (
 				0A85F4A5261ECB6A0023A431 /* NimbblCheckoutSDK.h in Headers */,
 				0A85F4E3261ECE5D0023A431 /* NimbblCheckoutViewController.h in Headers */,
+				0A0B7D7226341CA30099734B /* ReactNativeModalBridge.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -885,6 +887,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = tech.nimbbl.checkout.sdk;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -925,6 +928,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = tech.nimbbl.checkout.sdk;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

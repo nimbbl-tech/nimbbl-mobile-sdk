@@ -15,6 +15,6 @@ Pod::Spec.new do |spec|
   spec.ios.vendored_frameworks = 'NimbblCheckoutSDK.framework'
   spec.public_header_files = "NimbblCheckoutSDK.framework/Headers/*.h"
   spec.source_files = 'NimbblCheckoutSDK.framework/Headers/*.h'
-  spec.resources = 'NimbblCheckoutSDK.framework/*'
+  #spec.resources = 'NimbblCheckoutSDK.framework/*'
   #spec.ios.resource_bundle = { 'Nimbbl-SDK' => 'NimbblCheckoutSDK.framework/main.jsbundle' }
 end
