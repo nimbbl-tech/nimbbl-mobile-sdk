@@ -10,11 +10,10 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "9.0"
   spec.swift_version = "4.0"
   spec.source       = { :git => "https://gitlab.com/nimbbl/nimbbl_kit_mobile.git", :tag => "#{spec.version}" }
-  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   spec.ios.vendored_frameworks = 'NimbblCheckoutSDK.framework'
   spec.public_header_files = "NimbblCheckoutSDK.framework/Headers/*.h"
-  spec.source_files = 'NimbblCheckoutSDK.framework/Headers/*.h'
-  #spec.resources = 'NimbblCheckoutSDK.framework/*'
-  #spec.ios.resource_bundle = { 'Nimbbl-SDK' => 'NimbblCheckoutSDK.framework/main.jsbundle' }
+  spec.source_files = "NimbblCheckoutSDK.framework/Headers/*.h"
+  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  
 end
