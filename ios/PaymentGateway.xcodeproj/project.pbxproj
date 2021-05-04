@@ -8,15 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* PaymentGatewayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* PaymentGatewayTests.m */; };
+		0A4430E7263688C3005011D8 /* ReactNativeModalBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A85F4DF261ECE5D0023A431 /* ReactNativeModalBridge.h */; };
 		0A562458260A00C3000B7085 /* ReactNativeModalBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5623DC2609FBA8000B7085 /* ReactNativeModalBridge.m */; };
-		0A85F4A5261ECB6A0023A431 /* NimbblCheckoutSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A85F4A3261ECB6A0023A431 /* NimbblCheckoutSDK.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		0A85F4A5261ECB6A0023A431 /* NimbblCheckoutSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A85F4A3261ECB6A0023A431 /* NimbblCheckoutSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A85F4E2261ECE5D0023A431 /* NimbblCheckoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A85F4DD261ECE5D0023A431 /* NimbblCheckoutViewController.m */; };
-		0A85F4E3261ECE5D0023A431 /* NimbblCheckoutViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A85F4DE261ECE5D0023A431 /* NimbblCheckoutViewController.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		0A85F4E4261ECE5D0023A431 /* ReactNativeModalBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A85F4DF261ECE5D0023A431 /* ReactNativeModalBridge.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		0A85F4E3261ECE5D0023A431 /* NimbblCheckoutViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A85F4DE261ECE5D0023A431 /* NimbblCheckoutViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A85F4E5261ECE5D0023A431 /* ReactNativeModalBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A85F4E0261ECE5D0023A431 /* ReactNativeModalBridge.m */; };
 		0A85F4E6261ECE5D0023A431 /* NimbblCheckout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A85F4E1261ECE5D0023A431 /* NimbblCheckout.swift */; };
-		0A85F4FE261ED3320023A431 /* ReactNativeModalBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A5623DD2609FBA8000B7085 /* ReactNativeModalBridge.h */; };
-		0A85F54A261F1CF70023A431 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 0A85F549261F1CF70023A431 /* main.jsbundle */; };
+		0AE28BEE2626ED0000D465A9 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 0AE28BED2626ED0000D465A9 /* main.jsbundle */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -93,8 +92,8 @@
 		0A85F4DF261ECE5D0023A431 /* ReactNativeModalBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactNativeModalBridge.h; sourceTree = "<group>"; };
 		0A85F4E0261ECE5D0023A431 /* ReactNativeModalBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactNativeModalBridge.m; sourceTree = "<group>"; };
 		0A85F4E1261ECE5D0023A431 /* NimbblCheckout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NimbblCheckout.swift; sourceTree = "<group>"; };
-		0A85F549261F1CF70023A431 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		0AC676BE260875DB00A32213 /* PaymentGateway-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PaymentGateway-Bridging-Header.h"; sourceTree = "<group>"; };
+		0AE28BED2626ED0000D465A9 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* PaymentGateway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaymentGateway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = PaymentGateway/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = PaymentGateway/AppDelegate.m; sourceTree = "<group>"; };
@@ -197,7 +196,7 @@
 				0A85F4DF261ECE5D0023A431 /* ReactNativeModalBridge.h */,
 				0A85F4E0261ECE5D0023A431 /* ReactNativeModalBridge.m */,
 				0A85F4A4261ECB6A0023A431 /* Info.plist */,
-				0A85F549261F1CF70023A431 /* main.jsbundle */,
+				0AE28BED2626ED0000D465A9 /* main.jsbundle */,
 			);
 			path = NimbblCheckoutSDK;
 			sourceTree = "<group>";
@@ -316,10 +315,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A85F4E4261ECE5D0023A431 /* ReactNativeModalBridge.h in Headers */,
 				0A85F4A5261ECB6A0023A431 /* NimbblCheckoutSDK.h in Headers */,
 				0A85F4E3261ECE5D0023A431 /* NimbblCheckoutViewController.h in Headers */,
-				0A85F4FE261ED3320023A431 /* ReactNativeModalBridge.h in Headers */,
+				0A4430E7263688C3005011D8 /* ReactNativeModalBridge.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,7 +491,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A85F54A261F1CF70023A431 /* main.jsbundle in Resources */,
+				0AE28BEE2626ED0000D465A9 /* main.jsbundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -865,6 +863,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DC6A4358E36B1054991203C5 /* Pods-NimbblCheckoutSDK.debug.xcconfig */;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -888,6 +887,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = tech.nimbbl.checkout.sdk;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -904,6 +904,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1A51FCFAC893DC6A356A7929 /* Pods-NimbblCheckoutSDK.release.xcconfig */;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -927,6 +928,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = tech.nimbbl.checkout.sdk;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
