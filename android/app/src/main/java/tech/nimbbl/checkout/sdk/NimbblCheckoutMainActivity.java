@@ -188,12 +188,17 @@ public class NimbblCheckoutMainActivity extends AppCompatActivity implements Def
                         //Log.d("asd", "---------------- this is response : " + response);
                         try {
                             JSONObject serverResp = new JSONObject(response.toString());
+
                         } catch (JSONException e) {
                             // TODO Auto-generated catch block
                             e.printStackTrace();
                         }
                     }
                 });
+                Intent i = new Intent();
+                i.setAction("PaymentFailure");
+                i.putExtra("data", cancelOption);
+                sendBroadcast(i);
                 d.dismiss();
                 finish();
             }
