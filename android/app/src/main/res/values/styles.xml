@@ -1,0 +1,6 @@
+<resources>
+    <style name="CustomCheckbox" parent="@style/Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:button">@layout/checkbox_selector</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+</resources>
